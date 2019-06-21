@@ -1,5 +1,5 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import firebase from './node_modules/firebase/app';
+import './node_modules/firebase/firestore';
 // import 'firebase/auth';
 
 const firebaseConfig = {
@@ -15,3 +15,5 @@ firebase.initializeApp(firebaseConfig);
 firebase.firestore();
 
 export default firebase;
+
+//hi
