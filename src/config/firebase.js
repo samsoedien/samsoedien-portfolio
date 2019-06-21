@@ -1,7 +1,8 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+// import 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyAGEXilIQc8wSuXyIqKl8w58WDJQg2357M',
   authDomain: 'samsoedien-portfolio.firebaseapp.com',
   databaseURL: 'https://samsoedien-portfolio.firebaseio.com',
   projectId: 'samsoedien-portfolio',
@@ -11,6 +12,6 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-firebase.firestore().settings();
+firebase.firestore();
 
 export default firebase;
