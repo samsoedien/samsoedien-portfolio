@@ -1,0 +1,13 @@
+.contact-form {
+  margin: 24px;
+}
+
+.contact-form__input {
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.contact-form__submit {
+  margin-bottom: 12px;
+  float: right;
+}
