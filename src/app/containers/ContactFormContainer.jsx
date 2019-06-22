@@ -29,6 +29,12 @@ const ContactFormContainer = ({ emailContact }) => {
       message,
     };
     emailContact(contactData);
+    // setFormData({
+    //   name: '',
+    //   email: '',
+    //   subject: '',
+    //   message: '',
+    // });
   };
 
   return (
@@ -51,7 +57,11 @@ ContactFormContainer.propTypes = {
   emailContact: PropTypes.func.isRequired,
 };
 
+const mapStateToProps = state => ({
+  errors: state.errors,
+});
+
 export default connect(
-  null,
+  mapStateToProps,
   { emailContact },
 )(ContactFormContainer);

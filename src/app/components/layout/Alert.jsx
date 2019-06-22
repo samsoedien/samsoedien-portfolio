@@ -1,18 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { withStyles } from '@material-ui/core/styles';
 import { Snackbar, SnackbarContent, IconButton } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import { green } from '@material-ui/core/colors';
+import './Alert.css';
 
-const styles = theme => ({
-  snackbar: {
-    backgroundColor: green[600],
-  },
-});
-
-const Alert = ({ alerts, classes }) => {
+const Alert = ({ alerts }) => {
   const [open, setOpen] = useState(true);
 
   const handleClick = () => setOpen(true);
@@ -26,7 +19,7 @@ const Alert = ({ alerts, classes }) => {
     alerts !== null &&
     alerts.length > 0 &&
     alerts.map(alert => (
-      <div key={alert.id} className={`alert alert-${alert.alertType}`}>
+      <div key={alert.id}>
         <Snackbar
           anchorOrigin={{
             vertical: 'bottom',
@@ -44,7 +37,10 @@ const Alert = ({ alerts, classes }) => {
             </IconButton>,
           ]}
         >
-          <SnackbarContent message={alert.msg} className={classes.snackbar} />
+          <SnackbarContent
+            message={alert.msg}
+            className={`alert alert-${alert.alertType}`}
+          />
         </Snackbar>
       </div>
     ))
@@ -59,4 +55,4 @@ const mapStateToProps = state => ({
   alerts: state.alert,
 });
 
-export default connect(mapStateToProps)(withStyles(styles)(Alert));
+export default connect(mapStateToProps)(Alert);

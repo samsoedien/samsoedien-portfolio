@@ -31,7 +31,10 @@ export const emailContact = formData => async dispatch => {
       payload: res.data,
     });
     dispatch(
-      setAlert('Thank you for your message, it has been sent successfully!'),
+      setAlert(
+        'Thank you for your message, it has been sent successfully!',
+        'success',
+      ),
     );
   } catch (err) {
     const errors = err.response.data.errors;
@@ -40,6 +43,10 @@ export const emailContact = formData => async dispatch => {
     }
     dispatch({
       type: SEND_EMAIL_FAIL,
+    });
+    dispatch({
+      type: GET_ERRORS,
+      payload: err.response.data,
     });
   }
 };

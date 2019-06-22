@@ -5,6 +5,6 @@ import errorReducer from './errorReducer';
 
 export default combineReducers({
   alert: alertReducer,
-  error: errorReducer,
+  errors: errorReducer,
   // contact: contactReducer,
 });

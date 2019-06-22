@@ -38,8 +38,8 @@ const ContactForm = ({
             name="name"
             value={name}
             onChange={onChange}
-            error={errors.name}
-            helperText={errors ? errors.name : ''}
+            // error={errors.name}
+            // helperText={errors ? errors.name : ''}
           />
           <TextField
             className="contact-form__input"
@@ -49,8 +49,8 @@ const ContactForm = ({
             name="email"
             value={email}
             onChange={onChange}
-            error={errors.email}
-            helperText={errors ? errors.email : ''}
+            // error={errors.email}
+            // helperText={errors ? errors.email : ''}
           />
           <TextField
             className="contact-form__input"
@@ -60,8 +60,8 @@ const ContactForm = ({
             name="subject"
             value={subject}
             onChange={onChange}
-            error={errors.subject}
-            helperText={errors ? errors.subject : ''}
+            // error={errors.subject}
+            // helperText={errors ? errors.subject : ''}
           />
           <TextField
             className="contact-form__input"
@@ -72,8 +72,8 @@ const ContactForm = ({
             name="message"
             value={message}
             onChange={onChange}
-            error={errors.message}
-            helperText={errors ? errors.message : ''}
+            // error={errors.message}
+            // helperText={errors ? errors.message : ''}
           />
           <Button
             variant="contained"

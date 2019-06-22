@@ -31,3 +31,65 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+}
+
+.app-main {
+  position: relative;
+  z-index: 100;
+  margin-bottom: 320px; /* need to be equal to footer height */ /* not sure if negative */
+  background-color: white;
+}
+
+.divider {
+  display: inline-block;
+  margin: 12px 0;
+}
+
+.button {
+  margin-top: 12px;
+}
+
+strong {
+  font-weight: 600;
+  color: #00796b;
+}
+
+.horizontal-line {
+  margin: 0 auto;
+  margin-bottom: 24px;
+  border-bottom: 4px solid #00796b;
+  width: 180px;
+}
+
+.inline {
+  display: inline;
+}
+
+/* ==================== DISABLING RULES ==================== */
+
+.work-in-progress {
+  display: none;
+}
+
+.work-in-progress--construction {
+  display: none;
+}
+
+.work-in-progress--maintenance {
+  visibility: hidden;
+}

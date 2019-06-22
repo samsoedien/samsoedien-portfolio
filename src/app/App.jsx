@@ -10,6 +10,7 @@ import './App.css';
 
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
+import About from './components/about/About';
 
 import ContactFormContainer from './containers/ContactFormContainer';
 
@@ -18,9 +19,9 @@ const App = () => (
     <MuiThemeProvider theme={theme}>
       <Router>
         <div className="app">
-          {/* <Header /> */}
-          <main>
-            <h1>About</h1>
+          <Header />
+          <main className="app-main">
+            <About />
             <h1>Projects</h1>
             <h1>Photography</h1>
             <h1>Blogs</h1>
