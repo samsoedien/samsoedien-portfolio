@@ -37,16 +37,27 @@ export const emailContact = formData => async dispatch => {
       ),
     );
   } catch (err) {
-    const errors = err.response.data.errors;
-    if (errors) {
-      errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
-    }
-    dispatch({
-      type: SEND_EMAIL_FAIL,
+    // const errors = err.response.data.errors;
+    // if (errors) {
+    //   errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
+    // }
+    // dispatch({
+    //   type: SEND_EMAIL_FAIL,
+    // });
+
+    const errorArray = err.response.data.errors;
+
+    const errors = {};
+    errorArray.forEach(error => {
+      if (error.param === 'name') errors.name = error.msg;
+      if (error.param === 'email') errors.email = error.msg;
+      if (error.param === 'subject') errors.subject = error.msg;
+      if (error.param === 'message') errors.message = error.msg;
     });
+
     dispatch({
       type: GET_ERRORS,
-      payload: err.response.data,
+      payload: errors,
     });
   }
 };

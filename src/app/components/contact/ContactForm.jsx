@@ -38,8 +38,8 @@ const ContactForm = ({
             name="name"
             value={name}
             onChange={onChange}
-            // error={errors.name}
-            // helperText={errors ? errors.name : ''}
+            error={errors.name}
+            helperText={errors ? errors.name : ''}
           />
           <TextField
             className="contact-form__input"

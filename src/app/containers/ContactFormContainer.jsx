@@ -37,6 +37,8 @@ const ContactFormContainer = ({ emailContact }) => {
     // });
   };
 
+  console.log(errors);
+
   return (
     <Fragment>
       <ContactForm
