@@ -1,3 +1,16 @@
+# Portfolio website Samsoedien
+
+TODO:
+
+- Create Landing Page
+- Create responsive navbar
+- Convert each project into own section
+- Implement personalisation and visitor tracking (cookies)
+
+FIXME:
+
+- Contact form not displaying validation errors
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
